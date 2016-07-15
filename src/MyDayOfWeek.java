@@ -5,5 +5,12 @@ public enum MyDayOfWeek {
     WEDNESDAY,
     THURSDAY,
     FRIDAY,
-    SATURDAY
+    SATURDAY;
+
+    public MyDayOfWeek nexDay() {
+        if (this == SATURDAY) {
+            return SUNDAY;
+        }
+        return MyDayOfWeek.values()[this.ordinal() + 1];
     }
+}
